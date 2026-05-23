@@ -45,12 +45,29 @@ export interface MemoryEntry {
   updatedAt: string;
 }
 
+export type ToolAuthType = 'oauth' | 'api-key' | 'token' | 'webhook';
+
+export interface ToolCredentialField {
+  key: string;
+  label: string;
+  placeholder: string;
+  type: 'text' | 'password' | 'url';
+  required: boolean;
+  hint?: string;
+}
+
 export interface ConnectedTool {
   id: string;
   name: string;
   category: string;
   connected: boolean;
-  apiKey?: string;
+  authType: ToolAuthType;
+  features: string[];
+  docsUrl: string;
+  credentialFields: ToolCredentialField[];
+  credentials?: Record<string, string>;
+  connectedAt?: string;
+  connectedAccount?: string;
   metadata: Record<string, unknown>;
 }
 
