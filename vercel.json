@@ -1,0 +1,8 @@
+{
+  "crons": [
+    { "path": "/api/cron/daily-brief", "schedule": "0 7 * * *" },
+    { "path": "/api/cron/weekly-pmo", "schedule": "0 8 * * 1" },
+    { "path": "/api/cron/overdue-scan", "schedule": "0 9 * * *" },
+    { "path": "/api/cron/sales-followup", "schedule": "0 10 * * 1" }
+  ]
+}

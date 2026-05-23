@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #111827;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 3px;
+  }
+
+  body {
+    margin: 0;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-gray-800 bg-gray-900 p-4;
+  }
+
+  .btn-primary {
+    @apply rounded-lg bg-indigo-600 px-4 py-2 font-medium text-white transition-colors hover:bg-indigo-500 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply rounded-lg bg-gray-800 px-4 py-2 font-medium text-gray-200 transition-colors hover:bg-gray-700;
+  }
+
+  .btn-danger {
+    @apply rounded-lg border border-red-700 bg-red-900/50 px-4 py-2 font-medium text-red-300 transition-colors hover:bg-red-800/50;
+  }
+
+  .btn-success {
+    @apply rounded-lg border border-emerald-700 bg-emerald-900/50 px-4 py-2 font-medium text-emerald-300 transition-colors hover:bg-emerald-800/50;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-gray-700 bg-gray-800 px-3 py-2 text-gray-100 placeholder-gray-500 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-medium;
+  }
+}

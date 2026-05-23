@@ -1,3 +1,21 @@
+# Node.js / Next.js
+node_modules/
+.next/
+out/
+coverage/
+.npm/
+.pnpm-store/
+.yarn/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.vercel/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
